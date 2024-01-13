@@ -17,6 +17,9 @@ app.use(cors());
 app.use(express.json());
 
 // Define routes for authentication and messages
+app.get("/", (req, res) => {
+  res.send("welcome...");
+});
 app.use("/api/auth", userRouter);
 app.use("/api/messages", messageRouter);
 
